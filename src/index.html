@@ -10,7 +10,7 @@
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.styl" />
+        <link rel="stylesheet" href="style.scss" />
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -56,11 +56,30 @@
 
         <main>
             <section id="overview" class="slat">
-                <h2>Overview</h2>
-                <p>
-                    This is the overview section. Here you can find a high-level
-                    summary of our mission and the impact we're making.
-                </p>
+                <div class="overview-content-wrapper">
+                    <a href="/#" class="news-banner">
+                        <div class="news-tag">News</div>
+                        <p class="m-0">
+                            Pancreatic tumor RNA-seq dataset from Brown et al
+                            now available
+                        </p>
+                        <span class="material-icons show-tablet"
+                            >arrow_forward</span
+                        >
+                    </a>
+                    <h1 class="mb-5">
+                        Enabling radically collaborative cancer research.
+                    </h1>
+                    <p class="body-lg mb-5">
+                        Helping cancer teams accelerate research by unifying
+                        access to data, tools, programs, and collaborators.
+                    </p>
+                    <div class="overview-buttons">
+                        <a href="/#" class="button-primary">Explore</a>
+                        <a href="/#" class="button-primary">Contribute</a>
+                        <a href="/#" class="button-primary">Collaborate</a>
+                    </div>
+                </div>
             </section>
         </main>
 

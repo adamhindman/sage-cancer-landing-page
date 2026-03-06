@@ -1,0 +1,37 @@
+// Tablet breakpoint
+@media (min-width: 768px) {
+    #overview {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .overview-buttons {
+        flex-direction: row;
+        gap: space(1);
+        align-self: flex-start;
+    }
+
+    .news-banner {
+        flex-direction: row;
+        padding: space(1) space(3) space(1) 5px;
+        border-radius: 200px;
+        max-width: fit-content;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2.125rem;
+    }
+    h4 {
+        font-size: 1.75rem;
+    }
+    p {
+        font-size: 1.125rem;
+    }
+}

@@ -12,8 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@parcel/transformer-stylus": "^2.16.4",
+    "@parcel/transformer-sass": "^2.16.4",
     "parcel": "^2.16.4",
-    "stylus": "^0.64.0"
+    "sass": "^1.97.3"
   }
 }

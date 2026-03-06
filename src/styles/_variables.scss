@@ -1,0 +1,27 @@
+@use "sass:meta";
+
+// Spacing Unit (4px)
+$spacing-unit: 4px;
+
+// Function to calculate spacing in units of 4px
+// Usage:
+// .element { padding: space(4); } // Returns 16px
+@function space($multiplier) {
+    @if meta.type-of($multiplier) != "number" {
+        @error "The space() function only accepts numbers. Received: #{$multiplier}";
+    }
+    @return $spacing-unit * $multiplier;
+}
+
+// Color Variables
+$black: #0e101a;
+$brand-dark: #1f3042;
+$border-color: #dee0e5;
+$white: #ffffff;
+
+// Layout Variables
+$slat-horizontal-margin-mobile: space(4);
+$slat-vertical-margin-mobile: space(12);
+$slat-horizontal-margin-desktop: space(10);
+$slat-vertical-margin-desktop: space(32);
+$max-page-width: 1440px;

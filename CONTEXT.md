@@ -5,13 +5,13 @@ This project is a modern, responsive landing page focused on cancer-related info
 
 ## Tech Stack
 - **Bundler:** Parcel (configured for HMR and production builds).
-- **Styling:** Stylus (CSS preprocessor) with a mobile-first responsive strategy and smooth scrolling.
+- **Styling:** SCSS (Sass preprocessor) with a mobile-first responsive strategy and smooth scrolling.
 - **Icons:** Material UI Icons (loaded via Google Fonts CDN).
 - **Typography:** DM Sans (loaded via Google Fonts).
 - **Entry Points:** 
     - HTML: `src/index.html`
     - JS: `src/index.js` (using ES Modules)
-    - Stylus: `src/style.styl` (imported via JS)
+    - SCSS: `src/style.scss` (referenced in HTML)
 
 ## Design Tokens
 - **Colors:**
@@ -29,7 +29,7 @@ cancer landing page/
 │   │   └── images/    # Project images and graphics
 │   ├── index.html     # Main entry point & HTML structure
 │   ├── index.js       # JS entry point & CSS imports
-│   └── style.styl      # Responsive styles & breakpoints
+│   └── style.scss      # Responsive styles & breakpoints
 ├── package.json       # Project scripts and dependencies
 └── README.md          # Human-readable documentation
 ```
@@ -50,6 +50,6 @@ The project uses a mobile-first approach. Styles are structured as follows:
 ## AI Instructions
 - Use the `.slat` class for section containers (e.g., `<section id="overview" class="slat">`) to ensure consistent horizontal and vertical padding.
 - The Overview section (`#overview`) is configured as a hero slat with a background image (`src/assets/images/overview-bg.png`) aligned to the bottom right.
-- When adding new components, ensure they follow the established media query pattern in `style.styl`.
+- When adding new components, ensure they follow the established media query pattern in `style.scss`.
 - Use Material Icon class names (e.g., `<span class="material-icons">icon_name</span>`) for iconography.
-- Maintain the clean separation of concerns: logic in `.js`, structure in `.html`, and presentation in `.styl`.
+- Maintain the clean separation of concerns: logic in `.js`, structure in `.html`, and presentation in `.scss`.

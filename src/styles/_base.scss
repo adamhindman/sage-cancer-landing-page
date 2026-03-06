@@ -1,0 +1,63 @@
+// Base styles and CSS Reset
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --black: #{$black};
+    --brand-dark: #{$brand-dark};
+    --slat-horizontal-margin: #{$slat-horizontal-margin-mobile};
+    --slat-vertical-margin: #{$slat-vertical-margin-mobile};
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: $brand-dark;
+    margin: 0 auto;
+    padding: 0;
+    max-width: $max-page-width;
+    background-color: $white;
+}
+
+// Global Typography Reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Utility Classes
+.no-margin {
+    margin: 0 !important;
+}

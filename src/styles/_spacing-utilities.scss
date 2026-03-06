@@ -1,0 +1,57 @@
+@import "variables";
+
+// Spacing Utility Classes
+// Generates .m-1 (4px), .p-2 (8px), etc. up to 20 (80px)
+@for $i from 0 through 20 {
+    $value: space($i);
+
+    // Margin Utilities
+    .m-#{$i} {
+        margin: $value !important;
+    }
+    .mt-#{$i} {
+        margin-top: $value !important;
+    }
+    .mr-#{$i} {
+        margin-right: $value !important;
+    }
+    .mb-#{$i} {
+        margin-bottom: $value !important;
+    }
+    .ml-#{$i} {
+        margin-left: $value !important;
+    }
+    .mx-#{$i} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+    }
+    .my-#{$i} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+
+    // Padding Utilities
+    .p-#{$i} {
+        padding: $value !important;
+    }
+    .pt-#{$i} {
+        padding-top: $value !important;
+    }
+    .pr-#{$i} {
+        padding-right: $value !important;
+    }
+    .pb-#{$i} {
+        padding-bottom: $value !important;
+    }
+    .pl-#{$i} {
+        padding-left: $value !important;
+    }
+    .px-#{$i} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+    .py-#{$i} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+}
