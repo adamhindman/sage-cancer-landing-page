@@ -1,57 +1,83 @@
-@import "variables";
+@use "variables" as vars;
 
-// Spacing Utility Classes
-// Generates .m-1 (4px), .p-2 (8px), etc. up to 20 (80px)
-@for $i from 0 through 20 {
-    $value: space($i);
-
-    // Margin Utilities
-    .m-#{$i} {
-        margin: $value !important;
-    }
-    .mt-#{$i} {
-        margin-top: $value !important;
-    }
-    .mr-#{$i} {
-        margin-right: $value !important;
-    }
-    .mb-#{$i} {
-        margin-bottom: $value !important;
-    }
-    .ml-#{$i} {
-        margin-left: $value !important;
-    }
-    .mx-#{$i} {
-        margin-left: $value !important;
-        margin-right: $value !important;
-    }
-    .my-#{$i} {
-        margin-top: $value !important;
-        margin-bottom: $value !important;
+/**
+ * Mixin to generate spacing utilities
+ * Generates margin and padding classes for a specific breakpoint suffix.
+ * Example: .mb-5 (base), .mb-tablet-8 (tablet), .mb-desktop-12 (desktop)
+ */
+@mixin spacing-utilities($suffix: "") {
+    $class-suffix: "";
+    @if $suffix != "" {
+        $class-suffix: "-#{$suffix}";
     }
 
-    // Padding Utilities
-    .p-#{$i} {
-        padding: $value !important;
+    @for $i from 0 through 40 {
+        $value: vars.space($i);
+
+        // Margin Utilities
+        .m#{$class-suffix}-#{$i} {
+            margin: $value !important;
+        }
+        .mt#{$class-suffix}-#{$i} {
+            margin-top: $value !important;
+        }
+        .mr#{$class-suffix}-#{$i} {
+            margin-right: $value !important;
+        }
+        .mb#{$class-suffix}-#{$i} {
+            margin-bottom: $value !important;
+        }
+        .ml#{$class-suffix}-#{$i} {
+            margin-left: $value !important;
+        }
+        .mx#{$class-suffix}-#{$i} {
+            margin-left: $value !important;
+            margin-right: $value !important;
+        }
+        .my#{$class-suffix}-#{$i} {
+            margin-top: $value !important;
+            margin-bottom: $value !important;
+        }
+
+        // Padding Utilities
+        .p#{$class-suffix}-#{$i} {
+            padding: $value !important;
+        }
+        .pt#{$class-suffix}-#{$i} {
+            padding-top: $value !important;
+        }
+        .pr#{$class-suffix}-#{$i} {
+            padding-right: $value !important;
+        }
+        .pb#{$class-suffix}-#{$i} {
+            padding-bottom: $value !important;
+        }
+        .pl#{$class-suffix}-#{$i} {
+            padding-left: $value !important;
+        }
+        .px#{$class-suffix}-#{$i} {
+            padding-left: $value !important;
+            padding-right: $value !important;
+        }
+        .py#{$class-suffix}-#{$i} {
+            padding-top: $value !important;
+            padding-bottom: $value !important;
+        }
     }
-    .pt-#{$i} {
-        padding-top: $value !important;
-    }
-    .pr-#{$i} {
-        padding-right: $value !important;
-    }
-    .pb-#{$i} {
-        padding-bottom: $value !important;
-    }
-    .pl-#{$i} {
-        padding-left: $value !important;
-    }
-    .px-#{$i} {
-        padding-left: $value !important;
-        padding-right: $value !important;
-    }
-    .py-#{$i} {
-        padding-top: $value !important;
-        padding-bottom: $value !important;
-    }
+}
+
+// Base Spacing Utilities (Default/Mobile-first)
+// Generates .m-0 through .py-40
+@include spacing-utilities();
+
+// Tablet Spacing Utilities (min-width: 768px)
+// Generates .m-tablet-0 through .py-tablet-40
+@media (min-width: 768px) {
+    @include spacing-utilities("tablet");
+}
+
+// Desktop Spacing Utilities (min-width: 1024px)
+// Generates .m-desktop-0 through .py-desktop-40
+@media (min-width: 1024px) {
+    @include spacing-utilities("desktop");
 }

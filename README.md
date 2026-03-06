@@ -57,16 +57,25 @@ The design follows a mobile-first approach with the following breakpoints:
 This project uses a **4px base spacing unit**. You can apply spacing in two ways:
 
 ### 1. Utility Classes (Recommended for HTML)
-Apply margins and padding using classes in the format `{property}{side}-{multiplier}` where the multiplier is a unit of 4px (0-20).
+Apply margins and padding using classes in the format `{property}{side}[-{breakpoint}]-{multiplier}` where the multiplier is a unit of 4px (0-20).
 
 - **Properties**: `m` (margin), `p` (padding)
 - **Sides**: `t` (top), `b` (bottom), `l` (left), `r` (right), `x` (horizontal), `y` (vertical)
+- **Breakpoints (Optional)**: `tablet` (768px+), `desktop` (1024px+)
 - **Examples**: 
-  - `.mt-4` = `margin-top: 16px`
-  - `.px-2` = `padding-left: 8px; padding-right: 8px;` (Horizontal padding)
+  - `.mt-4` = `margin-top: 16px` (All screens)
+  - `.mb-tablet-10` = `margin-bottom: 40px` (Only 768px and up)
+  - `.px-desktop-20` = `padding-left: 80px; padding-right: 80px;` (Only 1024px and up)
   - `.py-6` = `padding-top: 24px; padding-bottom: 24px;` (Vertical padding)
   - `.pb-10` = `padding-bottom: 40px`
   - `.pt-2 .pr-4` = Use multiple classes for specific sides (8px top, 16px right)
+
+#### Responsive Spacing
+You can chain these classes to adjust spacing at different breakpoints:
+```html
+<!-- 16px margin-bottom on mobile, 40px on tablet, 80px on desktop -->
+<div class="mb-4 mb-tablet-10 mb-desktop-20">...</div>
+```
 
 ### 2. SCSS Function (For Stylesheets)
 Use the `space($multiplier)` function in your SCSS files.

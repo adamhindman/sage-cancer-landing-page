@@ -1,8 +1,9 @@
+@use "variables" as vars;
+
 // Desktop breakpoint
 @media (min-width: 1024px) {
     :root {
-        --slat-horizontal-margin: #{$slat-horizontal-margin-desktop};
-        --slat-vertical-margin: #{$slat-vertical-margin-desktop};
+        --slat-horizontal-margin: #{vars.$slat-horizontal-margin-desktop};
     }
 
     .desktop-only {
@@ -20,7 +21,7 @@
     .nav-links {
         list-style: none;
         display: flex;
-        gap: space(5);
+        gap: vars.space(5);
         margin: 0;
         padding: 0;
 
@@ -33,11 +34,10 @@
     #overview {
         display: flex;
         height: 1040px;
-        padding: var(--slat-vertical-margin) var(--slat-horizontal-margin) 0
-            var(--slat-horizontal-margin);
+        padding: 0 var(--slat-horizontal-margin) 0 var(--slat-horizontal-margin);
         flex-direction: column;
         align-items: flex-start;
-        gap: space(5);
+        gap: vars.space(5);
         align-self: stretch;
         background-size: 65%;
     }
@@ -63,7 +63,6 @@
         font-style: normal;
         font-weight: 500;
         line-height: 100%; /* 72px */
-        letter-spacing: -0.4px;
     }
     h2 {
         font-size: 3rem;

@@ -18,8 +18,10 @@ This project is a modern, responsive landing page focused on cancer-related info
     - `black`: `#0E101A`
     - `brand-dark`: `#1F3042`
 - **Layout:**
+    - `spacing-unit`: `4px`
     - `slat-horizontal-margin`: `16px` (mobile), `40px` (desktop)
     - `slat-vertical-margin`: `48px` (mobile), `128px` (desktop)
+    - `partnerships-content-wrapper`: `668px` max-width, centered horizontally, and text-aligned center.
 
 ## Project Structure
 ```
@@ -50,6 +52,10 @@ The project uses a mobile-first approach. Styles are structured as follows:
 ## AI Instructions
 - Use the `.slat` class for section containers (e.g., `<section id="overview" class="slat">`) to ensure consistent horizontal and vertical padding.
 - The Overview section (`#overview`) is configured as a hero slat with a background image (`src/assets/images/overview-bg.png`) aligned to the bottom right.
-- When adding new components, ensure they follow the established media query pattern in `style.scss`.
+- Use the 4px spacing system via the `space()` function in SCSS or utility classes in HTML.
+- **Responsive Spacing Utilities**: Use the format `{property}{side}[-{breakpoint}]-{multiplier}`.
+    - Breakpoints: `tablet` (768px+), `desktop` (1024px+).
+    - Example: `.mb-4 .mb-tablet-8 .mb-desktop-12`.
+- When adding new components, ensure they follow the established media query pattern in `style.scss` or the breakpoint-specific files in `src/styles/`.
 - Use Material Icon class names (e.g., `<span class="material-icons">icon_name</span>`) for iconography.
 - Maintain the clean separation of concerns: logic in `.js`, structure in `.html`, and presentation in `.scss`.

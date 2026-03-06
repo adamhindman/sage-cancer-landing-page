@@ -1,3 +1,5 @@
+@use "variables" as vars;
+
 // Tablet breakpoint
 @media (min-width: 768px) {
     #overview {
@@ -7,13 +9,13 @@
 
     .overview-buttons {
         flex-direction: row;
-        gap: space(1);
+        gap: vars.space(1);
         align-self: flex-start;
     }
 
     .news-banner {
         flex-direction: row;
-        padding: space(1) space(3) space(1) 5px;
+        padding: vars.space(1) vars.space(3) vars.space(1) 5px;
         border-radius: 200px;
         max-width: fit-content;
     }
@@ -23,7 +25,7 @@
         font-size: 3rem;
     }
     h2 {
-        font-size: 2.5rem;
+        font-size: 4.8rem;
     }
     h3 {
         font-size: 2.125rem;

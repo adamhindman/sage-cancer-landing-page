@@ -1,3 +1,5 @@
+@use "variables" as vars;
+
 // Base styles and CSS Reset
 html {
     scroll-behavior: smooth;
@@ -11,19 +13,20 @@ html {
 }
 
 :root {
-    --black: #{$black};
-    --brand-dark: #{$brand-dark};
-    --slat-horizontal-margin: #{$slat-horizontal-margin-mobile};
-    --slat-vertical-margin: #{$slat-vertical-margin-mobile};
+    --black: #{vars.$black};
+    --brand-dark: #{vars.$brand-dark};
+    --slat-horizontal-margin: #{vars.$slat-horizontal-margin-mobile};
 }
 
 body {
+    background-color: vars.$white;
+    color: vars.$brand-dark;
     font-family: "DM Sans", sans-serif;
-    color: $brand-dark;
+    font-style: normal;
+    font-weight: 400;
     margin: 0 auto;
+    max-width: vars.$max-page-width;
     padding: 0;
-    max-width: $max-page-width;
-    background-color: $white;
 }
 
 // Global Typography Reset
@@ -36,6 +39,17 @@ h6 {
     margin-top: 0;
     margin-bottom: 1rem;
     color: var(--black);
+    font-weight: 400;
+    font-feature-settings:
+        "dnom" on,
+        "numr" on,
+        "ss03" on,
+        "ss04" on,
+        "ss05" on,
+        "ss06" on,
+        "ss07" on,
+        "ss08" on,
+        "liga" off;
 }
 
 p {
@@ -60,4 +74,11 @@ img {
 // Utility Classes
 .no-margin {
     margin: 0 !important;
+}
+
+.cancer-portfolio-top-wrapper {
+    max-width: 668px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
