@@ -148,10 +148,16 @@
         }
     }
     #footer {
+        h2,
+        h3 {
+            text-align: left;
+        }
         .content-wrapper {
             grid-template-columns: repeat(4, 1fr);
             text-align: left;
-
+            li a {
+                font-size: 1.4rem;
+            }
             .about-sage {
                 grid-column: span 2;
             }

@@ -76,6 +76,15 @@ img {
     height: auto;
 }
 
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
 // Utility Classes
 .no-margin {
     margin: 0 !important;

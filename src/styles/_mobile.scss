@@ -358,6 +358,8 @@ small {
 
     &:hover {
         background-color: #f0f0f0;
+        text-decoration: none;
+        color: vars.$brand-gray-dark !important;
     }
 }
 
@@ -411,6 +413,16 @@ small {
         text-align: center;
     }
 
+    h2,
+    h3 {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: vars.$font-weight-semibold;
+        line-height: 2.4rem; /* 133.333% */
+        letter-spacing: -0.09px;
+        text-align: center;
+    }
+
     h4 {
         font-size: 1.8rem;
         font-weight: vars.$font-weight-bold;
@@ -427,12 +439,6 @@ small {
         margin-bottom: 0;
     }
 
-    a {
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     .column {
         ul {
             margin: 0;
@@ -443,13 +449,15 @@ small {
                 margin-bottom: 2.4rem;
                 a {
                     color: vars.$brand-gray-dark;
-                    text-decoration: none;
                     color: var(--black, #16181e);
                     font-size: 1.8rem;
                     font-style: normal;
                     font-weight: vars.$font-weight-regular;
                     line-height: 2.4rem; /* 133.333% */
                     letter-spacing: -0.09px;
+                    &:hover {
+                        color: vars.$brand-blue-light;
+                    }
                 }
             }
         }

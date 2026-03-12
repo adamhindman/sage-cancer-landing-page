@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (menuOpen && menuClose && mobileMenu) {
         menuOpen.addEventListener("click", () => {
             mobileMenu.classList.add("active");
+            menuOpen.setAttribute("aria-expanded", "true");
             document.body.style.overflow = "hidden"; // Prevent scrolling
         });
 
         menuClose.addEventListener("click", () => {
             mobileMenu.classList.remove("active");
+            menuOpen.setAttribute("aria-expanded", "false");
             document.body.style.overflow = ""; // Restore scrolling
         });
 
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileLinks.forEach((link) => {
             link.addEventListener("click", () => {
                 mobileMenu.classList.remove("active");
+                menuOpen.setAttribute("aria-expanded", "false");
                 document.body.style.overflow = "";
             });
         });

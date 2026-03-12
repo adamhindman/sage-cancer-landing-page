@@ -19,7 +19,10 @@
     <body>
         <nav class="navbar">
             <div class="nav-logo">
-                <a target="_blank" href="https://sagebionetworks.org"
+                <a
+                    target="_blank"
+                    href="https://sagebionetworks.org"
+                    rel="noopener noreferrer"
                     ><strong>Sage</strong> Cancer Research</a
                 >
             </div>
@@ -32,9 +35,16 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <!-- Mobile Menu Icon -->
-                <div class="mobile-only" id="menuOpen">
-                    <span class="material-icons">menu</span>
-                </div>
+                <button
+                    type="button"
+                    class="mobile-only"
+                    id="menuOpen"
+                    aria-label="Open mobile menu"
+                    aria-expanded="false"
+                    aria-controls="mobileMenu"
+                >
+                    <span class="material-icons" aria-hidden="true">menu</span>
+                </button>
             </div>
         </nav>
 
@@ -42,13 +52,21 @@
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-menu-header">
                 <div class="nav-logo">
-                    <a target="_blank" href="https://sagebionetworks.org"
+                    <a
+                        target="_blank"
+                        href="https://sagebionetworks.org"
+                        rel="noopener noreferrer"
                         ><strong>Sage</strong> Cancer Research</a
                     >
                 </div>
-                <div class="mobile-menu-close" id="menuClose">
-                    <span class="material-icons">close</span>
-                </div>
+                <button
+                    type="button"
+                    class="mobile-menu-close"
+                    id="menuClose"
+                    aria-label="Close mobile menu"
+                >
+                    <span class="material-icons" aria-hidden="true">close</span>
+                </button>
             </div>
             <ul class="mobile-nav-links">
                 <li><a href="#overview">Overview</a></li>
@@ -64,6 +82,7 @@
                     <a
                         target="_blank"
                         href="/#"
+                        rel="noopener noreferrer"
                         class="news-banner mb-12 mb-tablet-8"
                     >
                         <div class="news-tag">News</div>
@@ -71,7 +90,9 @@
                             Pancreatic tumor RNA-seq dataset from Brown et al
                             now available
                         </p>
-                        <span class="material-icons show-tablet"
+                        <span
+                            class="material-icons show-tablet"
+                            aria-hidden="true"
                             >arrow_forward</span
                         >
                     </a>
@@ -83,13 +104,25 @@
                         access to data, tools, programs, and collaborators.
                     </p>
                     <div class="overview-buttons">
-                        <a target="_blank" href="/#" class="button-primary"
+                        <a
+                            target="_blank"
+                            href="/#"
+                            rel="noopener noreferrer"
+                            class="button-primary"
                             >Explore</a
                         >
-                        <a target="_blank" href="/#" class="button-primary"
+                        <a
+                            target="_blank"
+                            href="/#"
+                            rel="noopener noreferrer"
+                            class="button-primary"
                             >Contribute</a
                         >
-                        <a target="_blank" href="/#" class="button-primary"
+                        <a
+                            target="_blank"
+                            href="/#"
+                            rel="noopener noreferrer"
+                            class="button-primary"
                             >Collaborate</a
                         >
                     </div>
@@ -136,7 +169,9 @@
                 >
                     <div class="item-content">
                         <div class="portfolio-chip mb-6">
-                            <span class="material-icons">coronavirus</span>
+                            <span class="material-icons" aria-hidden="true"
+                                >coronavirus</span
+                            >
                             MC² Center/ Cancer Complexity Knowledge Portal
                             (CCKP)
                         </div>
@@ -170,7 +205,10 @@
                             </ul>
                         </div>
                         <a class="primary-link" href="https://example.com"
-                            >Explore the CCKP<span class="icon up-right"></span
+                            >Explore the CCKP<span
+                                class="icon up-right"
+                                aria-hidden="true"
+                            ></span
                         ></a>
                     </div>
                     <div class="item-image cckp"></div>
@@ -181,7 +219,9 @@
                 >
                     <div class="item-content">
                         <div class="portfolio-chip mb-6">
-                            <span class="material-icons">coronavirus</span>
+                            <span class="material-icons" aria-hidden="true"
+                                >coronavirus</span
+                            >
                             Project GENIE
                         </div>
                         <h3>
@@ -207,7 +247,10 @@
                             </ul>
                         </div>
                         <a class="primary-link" href="https://example.com"
-                            >Explore Example<span class="icon up-right"></span
+                            >Explore Example<span
+                                class="icon up-right"
+                                aria-hidden="true"
+                            ></span
                         ></a>
                     </div>
                     <div class="item-image genie"></div>
@@ -218,7 +261,9 @@
                 >
                     <div class="item-content">
                         <div class="portfolio-chip mb-6">
-                            <span class="material-icons">coronavirus</span>
+                            <span class="material-icons" aria-hidden="true"
+                                >coronavirus</span
+                            >
                             MC² Center/ Cancer Complexity Knowledge Portal
                             (CCKP)
                         </div>
@@ -247,11 +292,15 @@
                             </ul>
                         </div>
                         <a class="primary-link mb-2" href="https://example.com"
-                            >Explore HTAN<span class="icon up-right"></span
+                            >Explore HTAN<span
+                                class="icon up-right"
+                                aria-hidden="true"
+                            ></span
                         ></a>
                         <a class="secondary-link" href="https://example.com"
                             >Learn about the MC² Center<span
                                 class="icon up-right"
+                                aria-hidden="true"
                             ></span
                         ></a>
                     </div>
@@ -263,7 +312,9 @@
                 >
                     <div class="item-content">
                         <div class="portfolio-chip mb-6">
-                            <span class="material-icons">emoji_events</span>
+                            <span class="material-icons" aria-hidden="true"
+                                >emoji_events</span
+                            >
                             Cancer Challenges
                         </div>
                         <h3>
@@ -281,7 +332,10 @@
                         </p>
                         <a class="primary-link" href="https://example.com"
                             >Explore Cancer Challenges
-                            <span class="icon up-right"></span
+                            <span
+                                class="icon up-right"
+                                aria-hidden="true"
+                            ></span
                         ></a>
                     </div>
                     <div class="item-image challenges"></div>
@@ -293,7 +347,13 @@
                         Want to learn more? Want to partner with us to empower
                         cancer research?
                     </h2>
-                    <a id="feedback-button" class="cta-link mt-8">Let's Talk</a>
+                    <button
+                        type="button"
+                        id="feedback-button"
+                        class="cta-link mt-8"
+                    >
+                        Let's Talk
+                    </button>
                 </div>
             </section>
             <section id="how-we-work" class="slat my-10 my-tablet-32">
@@ -341,91 +401,114 @@
                     </div>
                     <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="primary-link"
                         href="https://example.com"
                         >Learn About Our Approach
-                        <span class="icon up-right"></span
+                        <span class="icon up-right" aria-hidden="true"></span
                     ></a>
                 </div>
             </section>
-            <section id="footer" class="slat py-12 py-tablet-32">
-                <div class="content-wrapper">
-                    <div class="about-sage column">
-                        <h4>Sage Cancer Research</h4>
-                        <p>
-                            Advancing cancer discovery through open science,
-                            collaboration, and data infrastructure. A program
-                            of <a href="https://sagebionetworks.org/"
-                                >Sage Bionetworks</a
-                            >
-                        </p>
-                    </div>
-                    <div class="programs column">
-                        <div class="wrapper">
-                            <h4>Programs</h4>
-                            <small>Explore our active cancer initiatives</small>
-                            <ul class="mt-12">
-                                <li>
-                                    <a
-                                        target="_blank"
-                                        href="https://humantumoratlas.org/"
-                                        >HTAN</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        target="_blank"
-                                        href="https://genie.synapse.org/"
-                                        >GENIE</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        target="_blank"
-                                        href="https://www.synapse.org/Synapse:syn7080714/wiki/470467"
-                                        >MC2 Center</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        target="_blank"
-                                        href="https://challenges.synapse.org/"
-                                        >Cancer Challenges</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="about column">
-                        <div class="wrapper">
-                            <h4>About</h4>
-                            <small
-                                >Learn more about Sage and our cancer research
-                                team</small
-                            >
-                            <ul class="mt-12">
-                                <li>
-                                    <a target="_blank" href=""
-                                        >Cancer Research</a
-                                    >
-                                </li>
-                                <li>
-                                    <a target="_blank" href=""
-                                        >Synapse Platform</a
-                                    >
-                                </li>
-                                <li>
-                                    <a target="_blank" href="">Team</a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
+        </main>
+        <footer id="footer" class="slat py-12 py-tablet-32">
+            <div class="content-wrapper">
+                <div class="about-sage column">
+                    <h2 class="small-h2">Sage Cancer Research</h2>
+                    <p>
+                        Advancing cancer discovery through open science,
+                        collaboration, and data infrastructure. A program of <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://sagebionetworks.org/"
+                            >Sage Bionetworks</a
+                        >
+                    </p>
+                </div>
+                <div class="programs column">
+                    <div class="wrapper">
+                        <h3>Programs</h3>
+                        <small>Explore our active cancer initiatives</small>
+                        <ul class="mt-12">
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://humantumoratlas.org/"
+                                    >HTAN</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://genie.synapse.org/"
+                                    >GENIE</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://www.synapse.org/Synapse:syn7080714/wiki/470467"
+                                    >MC2 Center</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://challenges.synapse.org/"
+                                    >Cancer Challenges</a
+                                >
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </main>
+                <div class="about column">
+                    <div class="wrapper">
+                        <h3>About</h3>
+                        <small
+                            >Learn more about Sage and our cancer research
+                            team</small
+                        >
+                        <ul class="mt-12">
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href=""
+                                    >Cancer Research</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href=""
+                                    >Synapse Platform</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href=""
+                                    >Team</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href=""
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <script type="module" src="index.js" defer></script>
 
         <script
